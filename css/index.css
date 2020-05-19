@@ -1,0 +1,47 @@
+@charset 'utf-8';
+/* 스킵스타일시작 */
+.skip_menu{
+    background-color:#999;
+    padding:10px;
+    position:absolute;
+    left:0;
+    top:-100%;
+    width:100%;
+    transition:0.2s;
+}
+.skip_menu.active{
+    top:0;    
+}
+.skip_menu>p{
+    text-align:center;
+}
+.skip_menu>p>a{
+    font-weight:bold;
+    font-size:24px;
+    color:#fff;
+}
+.skip_menu>p>a:hover{
+    text-decoration: underline;
+}
+/* 스킵스타일끝 */
+
+/* 헤더스타일시작 */
+.header{
+    background-color:#000;
+}
+.header a{
+    color:#fff;
+}
+.article.small_nav,.article.large_nav{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+}
+.header ul{
+    display:flex;
+    flex-flow:row nowrap;
+}
+.header li{
+    padding:0 20px;
+}
+/* 헤더스타일끝 */
