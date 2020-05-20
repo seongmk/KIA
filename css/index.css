@@ -1,43 +1,162 @@
 @charset 'utf-8';
-
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* 기본pPXC버전 */
+/* 기본/pc버전/960이상*/
 body{
-    font-family: 'Gothic A1', sans-serif;
+  font-family: 'Gothic A1', sans-serif;
 }
 
 .content{
-    width:93.75%;
-    max-width:1200px;
-    margin:0 auto;
-}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
-
+  width:93.75%;
+  max-width:1400px;
+  margin:0 auto;
+}
+/* 스킵메뉴 */
 .skip_menu{
-    position: absolute;
-    left:0;
-    top:0;
-    display:none;       
-    padding:10px;
-    text-align:center;
-    background-color:black;
-    color:white;
+  position: absolute;
+  left:0;
+  top:-43px;  
+  padding:10px;
+  text-align:center;
+  background-color:#000000;
 }
-
 .skip_menu>a{
-    font-size:18px;
-    color:white;
+  font-size:18px;
+  color:#ffffff;
+}
+
+/* 헤더 */
+.logo{
+    position: absolute;
+    left:42%;
+    top:47%;
+}
+
+.header{
+    position: relative;
+    background-color:#000000;
+}
+
+.header a{
+    color:#ffffff;
+}
+
+.header .article>.content,.header .article>.content>ul{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.small_nav{
+  border-bottom:1px solid rgba(255,255,255,0.2);
+}
+.small_nav .content{
+  height:34px;
+}
+.small_nav ul:first-child li{
+  padding-right:20px;
+}
+.small_nav ul:last-child li{
+  padding-left:20px;
+}
+.small_nav a{
+  font-size:x-small;
+  color:rgba(255,255,255,0.5);
+  transition:0.1s;
+}
+.small_nav a:hover{
+  color:rgba(255,255,255,1);
+}
+.search{  
+  position:relative;
+  cursor: pointer;
+}
+.search::before{
+  content:'';
+  display:block;
+  width:12px;
+  height:12px;
+  border:2px solid rgba(255,255,255,0.5);
+  border-radius:50%;  
+}
+.search::after{
+  content:'';
+  display:block;
+  width:8px;
+  height:2px;
+  background-color:rgba(255,255,255,0.5);
+  transform:rotate(45deg);
+  position: absolute;
+  right:-4px;
+  bottom:0px;
+}
+.header .large_nav .content{
+  height:56px;
+}
+.large_nav>.content>ul:frist-child li{
+    padding:17px 30px;
+}
+.large_nav>.content>ul:frist-child .active{
+    background-color:#fff;
+}
+.large_nav>.content>ul:frist-child .active a{
+    color:#000;
+}
+.large_nav>.content>ul:last-child li{
+    padding-left:30px;
+}
+.large_nav a{
+    font-size:large;
+}
+.large_nav>.content>ul:first-child a{
+    font-weight: bold;
+    color:#fff;
+}
+.car_list{
+    position:absolute;
+    left:50%;
+    top:100%;
+    transform:translateX(-50%);
+}
+
+.car_list>li{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: center;
 }
 
 
 
-/* 태블릿 959이하 */
+@media (max-width:1200p){
+    .large_nav a{
+        font-size:14px;
+    }
+    
+    .large_nav>.content>ul:frist-child li{
+        
+    }
+    
+    .large_nav>.content>ul:last-child li{
+        padding-left:24px;
+    }
+    
+}
+
+
+
+
+/* 테블릿 959이하 */
 @media (max-width:959px){
 
 }
 
 
+
+
+
+
+
+
 /* 모바일 639이하 */
-@media(max-width:639px){
+@media (max-width:639px){
 
 }
