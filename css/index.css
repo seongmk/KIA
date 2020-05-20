@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-
+/* 기본pPXC버전 */
 body{
     font-family: 'Gothic A1', sans-serif;
 }
@@ -10,5 +10,34 @@ body{
 .content{
     width:93.75%;
     max-width:1200px;
-    margin:
+    margin:0 auto;
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+
+.skip_menu{
+    position: absolute;
+    left:0;
+    top:0;
+    display:none;       
+    padding:10px;
+    text-align:center;
+    background-color:black;
+    color:white;
+}
+
+.skip_menu>a{
+    font-size:18px;
+    color:white;
+}
+
+
+
+/* 태블릿 959이하 */
+@media (max-width:959px){
+
+}
+
+
+/* 모바일 639이하 */
+@media(max-width:639px){
+
 }
