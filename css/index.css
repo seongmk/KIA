@@ -409,16 +409,39 @@ h1 #tgl_nav_btn.active li:nth-child(3){
   .header .article.small_nav>.content>ul>li>a{
     font-size:12px;
   }
-  /* .header .article.small_nav>.content>ul>li:last-child{
+  .header .article.small_nav>.content>ul>li:last-child{
     display:none;
-  } */
+  }
+
   /* .nav{display:none;} */
-  .nav{
+  /* .nav{
     height:0;
     overflow:hidden;
   }
   .nav.active{
     height:auto;
+  } */
+
+  .car_list, .sub_nav{
+    position:static;
+    left:50%;
+    top:100%;
+    transform:translateX(0);
+  }
+
+  .large_nav .content{
+    height:auto;
+  }
+
+  .sub_nav{
+    flex-flow:column nowrap;
+    align-items:flex-start;
+    padding-left:0;
+  }
+  .sub_nav>li{
+    width:100%;
+    border-bottom:1px solid #e2e2e2;
+    padding:20px 0;
   }
 }
 
