@@ -34,17 +34,11 @@ $(function(){
   // 버거이벤트
   $('#tgl_nav_btn').click(function(){
     $(this).toggleClass('active');
-    // $('.nav').slideToggle();
+    $('.nav').toggleClass('active');
   })
 
-  // var tmp=$('.header .article.small_nav>.content>ul:last-child::after');
-  // console.log(tmp);
-  // tmp.mouseover(function(){
-  //   tmp.css('color','rgba(255,255,255,1');
-  // })
 
   // 호버이벤트
-
   $('.search').before('<li class="en"><a href="#">EN</a></li>');
   // $('.en').css({color:'rgba(255,255,255,0.5)',cursor:'pointer'});
   $('.en').mouseover(function(){

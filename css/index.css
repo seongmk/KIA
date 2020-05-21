@@ -402,13 +402,6 @@ h1 #tgl_nav_btn.active li:nth-child(3){
     justify-content:flex-start;
     align-items:flex-start;
   }
-  /* .header .article.small_nav>.content>ul:last-child::after{
-    content:'EN';
-    display:block;
-    color:rgba(255,255,255,0.5);
-    font-size:12px;
-    padding:6px 10px;
-  } */
 
   .header .article.small_nav>.content>ul>li{
     padding:6px 10px;
@@ -416,10 +409,17 @@ h1 #tgl_nav_btn.active li:nth-child(3){
   .header .article.small_nav>.content>ul>li>a{
     font-size:12px;
   }
-  .header .article.small_nav>.content>ul>li:last-child{
+  /* .header .article.small_nav>.content>ul>li:last-child{
     display:none;
-  }
+  } */
   /* .nav{display:none;} */
+  .nav{
+    height:0;
+    overflow:hidden;
+  }
+  .nav.active{
+    height:auto;
+  }
 }
 
 
