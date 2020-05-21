@@ -138,6 +138,7 @@ h1 #tgl_nav_btn.active li:nth-child(3){
 }
 .large_nav>.content>ul:first-child>li{
   padding:17px 30px;
+  height:56px;
 }
 .large_nav>.content>ul:first-child>li.active{
   background-color:#ffffff;
@@ -431,9 +432,6 @@ h1 #tgl_nav_btn.active li:nth-child(3){
 
   .large_nav .content{
     height:auto;
-  }
-  .large_nav .content>ul>li{
-    padding-bottom:
   }
 
   .sub_nav{
