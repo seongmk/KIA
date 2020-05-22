@@ -35,25 +35,25 @@ $(function(){
   $('#tgl_nav_btn').click(function(){
     $(this).toggleClass('active');
     $('.nav').toggleClass('active');
+    if($(this).attr('class')!='active'){
+      $('.sub_nav,.car_list,.large_nav>.content>ul>li').removeClass('active');
+    }
   })
 
-
-  // 호버이벤트
+  // en 호버이벤트
   $('.search').before('<li class="en"><a href="#">EN</a></li>');
-  // $('.en').css({color:'rgba(255,255,255,0.5)',cursor:'pointer'});
-  $('.en').mouseover(function(){
-    $(this).css('color','rgba(255,255,255,1)');
-  });
-  $('.en').mouseout(function(){
-    $(this).css('color','rgba(255,255,255,0.5)');
-  });
-  $(window).resize(function(){
-    var winWidth=$('window').width();
-  if(winWidth>=770){
-    $('en').hide();
-  }else{
-    $('.en').show();
-  }
-  });
   
+  // 윈도우 리사이즈 이벤트
+  $(window).resize(function(){
+    $('.nav_btn').parent().removeClass('active');
+    $('.nav_btn').next().removeClass('active');
+    var winWidth=$(window).width();
+    if(winWidth>=770){
+      $('.en').hide();
+    }else{
+      $('.en').show();
+    }
+  });
+    
+
 })
