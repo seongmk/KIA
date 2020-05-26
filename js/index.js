@@ -152,4 +152,24 @@ $(function(){
       type: 'bullets',
     },  
   });
+
+  // 기아뉴스 슬라이더
+  var mySwiper5 = new Swiper('.kia_news_slider', {
+    speed:300,
+    spaceBetween:10,
+    slidesPerView:2.5,
+    centeredSlides:true,
+    loop:true,
+    autoplay:{
+      delay:3000,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },  
+  });
 })

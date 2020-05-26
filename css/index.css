@@ -650,6 +650,21 @@ h2>span{
   font-weight:bold;
 }
 
+.news_notice{
+  display:flex;
+  flex-flow:row wrap; 
+}
+
+.news_notice>.kia_news{
+  width:60%;
+  padding:0 20px;
+}
+
+.news_notice>.notice{
+  width:40%;
+  padding:0 20px;
+}
+
 
 
 
@@ -670,13 +685,6 @@ h2>span{
 }
 
 
-
-
-
-
-
-
-
 @media (max-width:1100px){
   .large_nav a{
     font-size:medium;
@@ -691,13 +699,6 @@ h2>span{
     width:23%;
   }
 }
-
-
-
-
-
-
-
 
 
 /* 테블릿 959이하 */
@@ -743,13 +744,6 @@ h2>span{
     font-size:medium;
   }
 }
-
-
-
-
-
-
-
 
 
 
@@ -926,6 +920,12 @@ h2>span{
   .you_tube>.you_tube_txt>h3,
   .you_tube>.you_tube_txt>p{
     text-align:center;
+  }
+  .news_notice>.kia_news,.news_notice>.news_notice{
+    width:100%;
+  }
+  .kia_news_slider_img>img{
+    width:100%;
   }
 }
 
