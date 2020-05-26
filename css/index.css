@@ -16,6 +16,9 @@ h2{
 h3{
   font-size:x-large;
 }
+h4{
+  font-size:large;
+}
 .wrap>section{
   padding:50px 0;
 }
@@ -649,24 +652,182 @@ h2>span{
 .you_tube>.you_tube_txt>p>span{
   font-weight:bold;
 }
-
 .news_notice{
   display:flex;
-  flex-flow:row wrap; 
+  flex-flow:row wrap;
 }
-
 .news_notice>.kia_news{
   width:60%;
-  padding:0 20px;
+  padding:0 20px
+}
+.kia_news_slider img{
+  width:100%;
+}
+.kia_news_slider .swiper-pagination{
+  top:0;
+  bottom:auto;
+  padding:20px;
+  text-align:right;
+}
+.kia_news_slider .swiper-pagination .swiper-pagination-bullet{
+  background-color:#999999;
+  margin:0 4px !important;
+}
+.kia_news_slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
+  background-color:#d70f26;
+}
+.kia_news_slider .swiper-button-prev,
+.kia_news_slider .swiper-button-next{
+  display:none;
+}
+.kia_news_slider:hover .swiper-button-prev,
+.kia_news_slider:hover .swiper-button-next{
+  display:block;
+}
+.kia_news_slider p{
+  padding:20px 0 8px
+}
+.kia_news_slider a{
+  font-size:large;
+}
+.kia_news_slider .swiper-slide-duplicate-prev .kia_news_slider_txt{
+  visibility:hidden;
 }
 
 .news_notice>.notice{
   width:40%;
-  padding:0 20px;
+  padding:0 20px
+}
+.notice_txt{
+  display:flex;
+  flex-flow:row wrap;
+}
+.notice_txt>li{
+  width:50%;
+  border:1px solid rgba(0,0,0,0.2);
+  padding:20px;
+  transition:0.3s;
+  cursor: pointer;
+}
+.notice_txt>li:hover{
+  background-color:#d70f26;
+}
+.notice_txt>li:nth-child(2n+1){
+  border-right:none;
+}
+.notice_txt>li:nth-child(1),
+.notice_txt>li:nth-child(2){
+  border-bottom:none;
+}
+.notice_txt>li>h4{
+  font-weight:normal;
+  padding-bottom:30px;
 }
 
+.footer{
+  background-color:#333333;
+  padding:0 10px;
+}
+.footer,.footer div,.footer p, .footer a,.footer span,.footer h5,.footer li,.footer {
+  color:#ffffff;
+  font-size:small;
+}
+.footer_top{
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content:space-between;
+  align-items:center;
+  height:80px;
+  border-bottom:1px solid rgba(0,0,0,0.2);
+}
+.footer_top_left,
+.footer_top_right{
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content:flex-start;
+}
+.footer_top_left p{
+  text-indent:-99999px;
+  width:44px;
+  height:44px;
+  margin-right:12px;
+  background-image:url('../images/iconset02.webp');
+  cursor: pointer;
+}
+.footer_top_left p:nth-child(2){
+  background-position-x:-45px;
+}
+.footer_top_left p:nth-child(3){
+  background-position-x:-89px;
+}
+.footer_top_left p:nth-child(4){
+  background-position-x:-176px;
+}
+.footer_top_left p:nth-child(5){
+  background-position-x:-220px;
+}.footer_top_left p:nth-child(6){
+  background-position-x:-264px;
+}
+.footer_top_right div{
+  height:44px;
+  line-height:44px;
+}
+.footer_top_right div:nth-child(1){
+  margin-right:16px;
+}
+.footer_top_right div:nth-child(2){
+  margin-right:30px;
+}
+.footer_top_right div:nth-child(3){
+  position: relative;
+  width:200px;
+  text-align:center;
+  border:1px solid #ffffff;
+  cursor: pointer;
+}
 
+.footer_top_right div:nth-child(3)::after{
+  content:'^';
+  display:block;
+  font-size:xx-large;
+  position: absolute;
+  right:10px;
+  top:10px;
+}
+.footer_top_right div:nth-child(3) span{
+  font-size:large;
+}
+.footer_top_right div img{
+  vertical-align:middle;
+}
+#footer_tgl_btn>ul{
+  position: absolute;
+  left:-1px;
+  top:0;
+  z-index:10;
+  transform:translateY(-100%);
+  width:200px;
+  height:0;
+  border:none;
+  background-color:#333333;
+  overflow-x:hidden;
+  overflow-y:scroll;
+  transition:0.3s;
+}
+#footer_tgl_btn>ul.active{
+  height:200px;
+  border:1px solid #ffffff;
+}
+#footer_tgl_btn>ul>li{
+  text-align:center;
+}
+.footer_middle{
+  display:flex;
+  flex-flow:row nowrap;
+}
 
+.footer_middle_left{flex:45%;}
+.footer_middle_right{flex:55%;}
 
 
 
@@ -685,6 +846,13 @@ h2>span{
 }
 
 
+
+
+
+
+
+
+
 @media (max-width:1100px){
   .large_nav a{
     font-size:medium;
@@ -699,6 +867,13 @@ h2>span{
     width:23%;
   }
 }
+
+
+
+
+
+
+
 
 
 /* 테블릿 959이하 */
@@ -744,6 +919,13 @@ h2>span{
     font-size:medium;
   }
 }
+
+
+
+
+
+
+
 
 
 
@@ -921,11 +1103,34 @@ h2>span{
   .you_tube>.you_tube_txt>p{
     text-align:center;
   }
-  .news_notice>.kia_news,.news_notice>.news_notice{
+  .kia_news h4>a,.kia_news h4{
+    font-size:medium;
+  }
+  .news_notice>.kia_news,
+  .news_notice>.notice{
     width:100%;
   }
-  .kia_news_slider_img>img{
+  .news_notice>.notice{
+    margin-top:100px;
+  }
+  .notice_txt>li{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+    align-items:center;
     width:100%;
+    border:1px solid rgba(0,0,0,0.2) !important;
+    border-bottom:none !important;
+    padding-bottom:16px;
+  }
+  .notice_txt>li:last-child{
+    border-bottom:1px solid rgba(0,0,0,0.2) !important;
+  }
+  .notice_txt>li>h4 {
+    padding-bottom:0;
+  }
+  .footer_top_right{
+    display:none;
   }
 }
 

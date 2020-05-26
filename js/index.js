@@ -56,7 +56,7 @@ $(function(){
   });
     
   // 메인슬라이더
-  var mySwiper1 = new Swiper('.main_slider', {
+  var mySwiper = new Swiper('.main_slider', {
     speed:300,
     effect:'fade',
     loop:true,
@@ -85,8 +85,7 @@ $(function(){
     mySwiper.autoplay.stop();
   });
 
-
-  // 베스트 기아 슬라이더
+  // 베스트기아슬라이더
   var mySwiper2 = new Swiper('.best_kia_slider', {
     speed:300,
     spaceBetween:0,
@@ -96,21 +95,20 @@ $(function(){
     autoplay:{
       delay:3000,
     },
-  
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-      },
-      breakpoints: {
-        // when window width is >= 770px
-        770: {
-          slidesPerView: 3.5,
-        },      
-      },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+    breakpoints: {
+      // when window width is >= 770px
+      770: {
+        slidesPerView: 3.5,
+      },      
+    },
   });
 
   // 이벤트기아슬라이더
@@ -130,10 +128,9 @@ $(function(){
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
-    },  
+    },    
   });
-
-  // 이벤트채널슬라이더
+  // 이벤트기아슬라이더
   var mySwiper4 = new Swiper('.channel_kia_slider', {
     speed:300,
     spaceBetween:0,
@@ -150,15 +147,14 @@ $(function(){
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
-    },  
+    },    
   });
 
-  // 기아뉴스 슬라이더
+  // 기아뉴스슬라이더
   var mySwiper5 = new Swiper('.kia_news_slider', {
     speed:300,
     spaceBetween:10,
     slidesPerView:2.5,
-    centeredSlides:true,
     loop:true,
     autoplay:{
       delay:3000,
@@ -170,6 +166,15 @@ $(function(){
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
-    },  
+    },    
+  });
+ 
+  // #footer_tgl_btn이벤트
+  $('#footer_tgl_btn').click(function(){
+    $(this).children('ul').toggleClass('active');
+  });
+  $('#footer_tgl_btn>ul>li').click(function(){
+    var selectValue=$(this).children('a').text();
+    $('#footer_tgl_btn span').text(selectValue);
   });
 })
