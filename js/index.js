@@ -55,5 +55,101 @@ $(function(){
     }
   });
     
+  // 메인슬라이더
+  var mySwiper1 = new Swiper('.main_slider', {
+    speed:300,
+    effect:'fade',
+    loop:true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',      
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 5000,
+    },
+  });
 
+  // 스타트/스톱 이벤트
+  $('#start_btn').click(function(){
+    $('.start_stop_btn>button').hide();
+    $('#stop_btn').show();
+    mySwiper.autoplay.start();
+  });
+  $('#stop_btn').click(function(){
+    $('.start_stop_btn>button').hide();
+    $('#start_btn').show();
+    mySwiper.autoplay.stop();
+  });
+
+
+  // 베스트 기아 슬라이더
+  var mySwiper2 = new Swiper('.best_kia_slider', {
+    speed:300,
+    spaceBetween:0,
+    slidesPerView:1.5,
+    centeredSlides:true,
+    loop:true,
+    autoplay:{
+      delay:3000,
+    },
+  
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+      },
+      breakpoints: {
+        // when window width is >= 770px
+        770: {
+          slidesPerView: 3.5,
+        },      
+      },
+  });
+
+  // 이벤트기아슬라이더
+  var mySwiper3 = new Swiper('.event_kia_slider', {
+    speed:300,
+    spaceBetween:0,
+    slidesPerView:1,
+    centeredSlides:true,
+    loop:true,
+    autoplay:{
+      delay:3000,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },  
+  });
+
+  // 이벤트채널슬라이더
+  var mySwiper4 = new Swiper('.channel_kia_slider', {
+    speed:300,
+    spaceBetween:0,
+    slidesPerView:1,
+    centeredSlides:true,
+    loop:true,
+    autoplay:{
+      delay:3000,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },  
+  });
 })
