@@ -5,9 +5,7 @@
 body{
   font-family: 'Gothic A1', sans-serif;
 }
-.wrap{
-  margin-bottom:300px;
-}
+
 h2{
   font-weight:bolder;
   font-size:xx-large;
@@ -18,6 +16,9 @@ h3{
 }
 h4{
   font-size:large;
+}
+.main_tit{
+  padding-bottom:10px;
 }
 .wrap>section{
   padding:50px 0;
@@ -310,6 +311,7 @@ h1 #tgl_nav_btn.active li:nth-child(3){
 
 .main_banner{
   position: relative;
+  padding-top:0 !important;
 }
 .main_box{
   position:relative;
@@ -597,8 +599,11 @@ h2>span{
 }
 .channel_kia_slider_txt>h3>span{
   display:inline-block;
+  width:120px;
+  margin-right:12px;
   border:1px solid #000000;
-  padding:3px;
+  padding:14px 0;
+  text-align:center;
 }
 .event_channel .swiper-pagination-fraction, 
 .event_channel .swiper-pagination-custom, 
@@ -723,12 +728,10 @@ h2>span{
   font-weight:normal;
   padding-bottom:30px;
 }
+
 .footer{
   background-color:#333333;
   padding:0 10px;
-}
-.footer a{
-  /* text-decoration:underline; */
 }
 .footer,
 .footer div,
@@ -739,6 +742,9 @@ h2>span{
 .footer li{
   color:#ffffff;
   font-size:small;
+}
+.footer a:hover{
+  text-decoration:underline;
 }
 .footer_top{
   display:flex;
@@ -868,30 +874,24 @@ h2>span{
   flex-flow:row nowrap;
   padding:8px 0;
 }
-
 .award>li>p:nth-child(1){
   margin-right:6px;
 }
-
 .award>li>p:nth-child(2){
   display:flex;
   align-items:center;
 }
-
-
 .footer_bottom_left{
-  padding-right:55px;
+  padding-right:50px;
   order:1;
 }
-
 .footer_bottom_right{
-  display:flex;
   order:2;
+  display:flex;
 }
 .footer_bottom_right>p{
   padding:0 10px;
 }
-
 
 
 
@@ -980,6 +980,24 @@ h2>span{
   }
   .quick_nav>li>p{
     font-size:medium;
+  }
+  .footer_middle_left{
+    flex:2;
+  }
+  .service{
+    padding-bottom:20px;
+  }
+  .service,.info{
+    flex:initial;
+  }
+  .footer_middle_right{
+    flex:8;
+  }
+  .footer_bottom_left{
+    padding-right:20px;
+  }
+  .footer_bottom_right>p{
+    padding:0 5px;
   }
 }
 
@@ -1194,6 +1212,36 @@ h2>span{
   }
   .footer_top_right{
     display:none;
+  }
+  .footer_middle{
+    display:none;
+  }
+  .footer_bottom{
+    flex-flow:column;
+  }
+  .footer_bottom::after{
+    content:'한국';
+    display:inline-block;
+    color:#ffffff;
+    padding-left:40px;
+    background:url('../images/korea.jpg') no-repeat;
+    background-size:contain;
+    order:2;
+    margin-bottom:30px;
+    cursor: pointer;
+    font-weight:bold;
+  }
+  .footer_bottom_left{
+    order:3;
+  }
+  .footer_bottom_right{
+    order:1;
+    flex-flow:row wrap;
+    margin-bottom:20px;
+  }
+  .footer_bottom_right>p{
+    width:50%;
+    padding:10px 0;
   }
 }
 
